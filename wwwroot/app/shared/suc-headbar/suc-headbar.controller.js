@@ -15,6 +15,7 @@
 
         accountHeadbar.changeLanguage = function (key) {
             $translate.use(key);
+            localStorage.setItem('lang', key);
         };
     }
 })();

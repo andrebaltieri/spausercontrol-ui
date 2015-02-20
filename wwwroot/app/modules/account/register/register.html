@@ -1,11 +1,3 @@
-<style>
-    .fieldValid {
-        border: 1px solid #00ff00;
-    }
-    .fieldInvalid {
-        border: 1px solid #ff0000;
-    }
-</style>
 
 <div ng-controller="RegisterController as register">
     <rb-account-head-bar></rb-account-head-bar>
@@ -21,21 +13,19 @@
                     <h3 class="text-center rb-journal-regular" translate="REGISTER">registre-se</h3>
                 </div>
                 <div class="panel-body">
-                    <rb-input-name id="name" ng-model="register.user.name"></rb-input-name>
+                    <suc-input-name id="name" ng-model="register.user.name"></suc-input-name>
 
-                    <rb-input-email id="email" ng-model="register.user.email"></rb-input-email>
+                    <suc-input-email id="email" ng-model="register.user.email"></suc-input-email>
 
-                    <div class="form-group">
-                        <label for="password" translate="PASSWORD">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="{{ 'INPUT_YOUR_PASSWORD' | translate }}" required/>
-                    </div>
+                    <suc-input-password id="password" ng-model="register.user.password"></suc-input-password>
+
                     <div class="form-group">
                         <label for="password" translate="CONFIRM_PASSWORD">Confirm Password</label>
                         <input type="password" class="form-control" id="confirmpassword" placeholder="{{ 'INPUT_YOUR_CONFIRM_PASSWORD' | translate }}" required/>
                     </div>
                 </div>
                 <div class="panel-footer text-right">
-                    <input type="submit" class="btn btn-primary" value="{{ 'CONTINUE' | translate }}" />
+                    <input type="submit" class="btn btn-primary" value="{{ 'CONTINUE' | translate }}" ng-disabled="registerForm.$invalid || !registerForm.$dirty" />
                 </div>
             </div>
         </div>

@@ -1,23 +1,15 @@
 <div class="navbar navbar-inverse" ng-controller="SucHeadBarController as accountHeadbar">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">{{ headbar.title }}</a>
-    </div>
-    <div class="navbar-collapse collapse navbar-inverse-collapse" ng-show="isAuthorized">
+    <div class="navbar-collapse collapse navbar-inverse-collapse">
        <div class="container">
            <ul class="nav navbar-nav">
-               <li><a class="navbar-brand" href="#">Project name</a></li>
-               <li class="active"><a href="#">Active</a></li>
-               <li><a href="#">Link</a></li>
+               <li><a class="navbar-brand" href="#">SPA User Control</a></li>
+               <li ng-show="isAuthorized"><a href="#">Active</a></li>
+               <li ng-show="isAuthorized"><a href="#">Link</a></li>
            </ul>
 
            <ul class="nav navbar-nav navbar-right">
                <li class="dropdown">
-                   <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span ng-translate="LANGUAGE"></span> <b class="caret"></b></a>
+                   <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span translate="LANGUAGE"></span> <b class="caret"></b></a>
                    <ul class="dropdown-menu">
                        <li><a href="javascript:void(0);" translate="PORTUGUESE"
                               ng-click="accountHeadbar.changeLanguage('pt')">Portuguese</a></li>
