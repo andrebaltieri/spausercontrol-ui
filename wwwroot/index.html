@@ -20,31 +20,27 @@
 
 <body>
 
-<div class="container">
-
-</div>
+<suc-head-bar></suc-head-bar>
+<div ng-view></div>
 
 <!-- Script Bundle -->
 <script src="assets/libs/scripts-bundle.min.js"></script>
 
-<!-- Development Only
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="../bower_components/toastr/toastr.js"></script>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-cookie/angular-cookie.js"></script>
-<script src="../bower_components/angular-route/angular-route.js"></script>
-<script src="../bower_components/angular-animate/angular-animate.js"></script>
-<script src="../bower_components/angular-translate/angular-translate.js"></script>
--->
-
 <!-- Config -->
 <script src="app/app.modules.js"></script>
 <script src="app/app.config.js"></script>
+<script src="app/app.routes.js"></script>
 
 <!-- Resources -->
 <script src="app/resources/app.translate.en.js"></script>
 <script src="app/resources/app.translate.pt.js"></script>
+
+<!-- Controlelrs -->
+<script src="app/shared/suc-headbar/suc-headbar.controller.js"></script>
+<script src="app/modules/account/register/register.controller.js"></script>
+
+<!-- Directives -->
+<script src="app/shared/suc-headbar/suc-headbar.directive.js"></script>
 
 </body>
 
